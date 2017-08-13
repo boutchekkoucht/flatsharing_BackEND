@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.network.flatsharing.entities.User;
 
 @Repository
-public class UseDao implements IUserDao {
+public class UserDao implements IUserDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;

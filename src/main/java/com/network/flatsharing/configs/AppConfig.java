@@ -13,6 +13,7 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.network.flatsharing.entities.Profil;
 import com.network.flatsharing.entities.User;
 
 import static org.hibernate.cfg.Environment.*;
@@ -54,7 +55,7 @@ public class AppConfig {
 	            env.getProperty("hibernate.c3p0.max_statements"));
 
 	      factoryBean.setHibernateProperties(props);
-	      factoryBean.setAnnotatedClasses(User.class);
+	      factoryBean.setAnnotatedClasses(new Class[]{User.class,Profil.class});
 	      return factoryBean;
 	   }
 

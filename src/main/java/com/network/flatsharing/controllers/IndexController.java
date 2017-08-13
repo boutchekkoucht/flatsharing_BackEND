@@ -32,13 +32,13 @@ public class IndexController {
 	   
 	   @RequestMapping(path={"/saveUser"},method=RequestMethod.GET)
 	   public String addUser(Model model) {
-		   User u = new User("Mohammed","BOUTCHEKKOUCHT","boutchekkoucht@gmail68484996.com","dd6ed9");
+		   User u = new User("Mohammed","BOUTCHEKKOUCHT","boutchekkoucht@hotmail.com","dd6ed9");
 		   service.saveUser(u);
 		   
-		   u.setLast_name("BEN BOUTCHEKKOUCT");
+		   u.setLast_name("boutchekkou");
 		   service.updateUser(u);
 		   
-		   service.deleteUser(2L);
+		   service.deleteUser(3L);
 		   model.addAttribute("user",u);
 		   return "index";
 	   }
